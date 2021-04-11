@@ -1,0 +1,50 @@
+#property of pu lord 69
+import setup
+
+
+
+
+
+def string_from_data(data):
+    return '\n'.join(data)
+
+def data_from_string(s):
+    return s.split('\n')
+
+
+def addlink(data, filename):
+    with open(filename, 'w') as fh:
+        fh.write(string_from_data(data))
+
+def getlink(filename):
+    with open(filename) as fh:
+        return data_from_string(fh.read())
+        
+FILENAME = 'links.txt'
+
+if setup.os.path.isfile(FILENAME):
+    links = getlink(FILENAME)
+else:
+    links = []
+
+# ... work with mylist
+
+addlink(links, FILENAME)
+
+@setup.client.command()
+async def addlink(ctx, *, data):
+  with open(FILENAME, 'w') as fh:
+      fh.write(string_from_data)
+      fh.write(data)
+      await ctx.send(f'addedlink: {data}')
+
+@setup.client.command()
+async def getlink(ctx):
+  with open(FILENAME) as fh:
+      #return data_from_string(fh.read())
+      llink = fh.readline.random()
+      #llink = data_from_string
+      await ctx.send(f'randlink: {llink}')
+      #return getlink(fh.setup.read.random.choice())
+
+     # {setup.random.choice(responses)}
