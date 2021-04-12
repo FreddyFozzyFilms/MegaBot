@@ -1,7 +1,0 @@
-def save(data, filename):
-    with open(filename, 'w') as fh:
-        fh.write(string_from_data(data))
-
-def retrieve(filename):
-    with open(filename) as fh:
-        return data_from_string(fh.read())

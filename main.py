@@ -3,14 +3,10 @@ import setup
 # imports all scripts in subscripts 
 #no need to keep writing import statements!
 import subscripts.basics
-import subscripts.template
 import subscripts.translateLatex
 import subscripts.ascii
 import subscripts.respond
-
-#import links.linkAdd
-import links.pickledLinks
-import links.randLink
+import subscripts.randLinks
 
 
 from keep_alive import keep_alive
